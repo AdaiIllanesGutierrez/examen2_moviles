@@ -11,6 +11,7 @@ import androidx.navigation.navArgument
 import com.ucb.domain.Movie
 import com.ucb.ucbtest.counter.CounterUI
 import com.ucb.ucbtest.gitalias.GitaliasUI
+import com.ucb.ucbtest.home.HomeUI
 import com.ucb.ucbtest.login.LoginUI
 import com.ucb.ucbtest.movie.MoviesUI
 import com.ucb.ucbtest.moviedetail.MovieDetailUI
@@ -84,6 +85,9 @@ fun AppNavigation() {
 
         composable(Screen.CounterScreen.route) {
             CounterUI()
+        }
+        composable(Screen.HomeScreen.route) {
+            HomeUI()
         }
 
     }
