@@ -24,16 +24,21 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.ucb.ucbtest.R
 import com.ucb.ucbtest.home.model.Plan
+import com.ucb.ucbtest.navigation.Screen
 
 @Composable
 fun PlanCard(
     plan: Plan,
     onNext: () -> Unit,
     onPrev: () -> Unit,
-    onWhatsapp: () -> Unit
+    onWhatsapp: () -> Unit,
+    navController: NavHostController
+
 ) {
+
     Box(modifier = Modifier.fillMaxWidth()) {
         Column(
             modifier = Modifier
@@ -138,7 +143,9 @@ fun PlanCard(
 
             // Botón (más atractivo)
             Button(
-                onClick = { /* Acción: seleccionar plan */ },
+                onClick = {
+                    navController.navigate(Screen.PlanFormScreen.route)
+                },
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0xFFEC7767),
                     contentColor = Color.White

@@ -16,9 +16,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavHostController
 
 @Composable
-fun HomeUI(viewModel: HomeViewModel = hiltViewModel()) {
+fun HomeUI(viewModel: HomeViewModel = hiltViewModel(),navController: NavHostController
+) {
     val currentPlan by viewModel.currentPlan.collectAsState()
     val context = LocalContext.current
 
@@ -42,7 +44,8 @@ fun HomeUI(viewModel: HomeViewModel = hiltViewModel()) {
                 plan = currentPlan,
                 onNext = { viewModel.nextPlan() },
                 onPrev = { viewModel.prevPlan() },
-                onWhatsapp = { openWhatsapp(context) }
+                onWhatsapp = { openWhatsapp(context) },
+                navController = navController
             )
         }
 

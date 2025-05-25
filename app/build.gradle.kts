@@ -78,6 +78,9 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":framework"))
 
+    implementation(libs.maps.compose)
+    implementation(libs.play.services.maps)
+
 }
 
 kapt {

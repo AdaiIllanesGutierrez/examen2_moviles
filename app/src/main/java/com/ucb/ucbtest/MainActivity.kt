@@ -8,6 +8,7 @@ import com.ucb.ucbtest.counter.CounterUI
 import com.ucb.ucbtest.counter.CounterUIV2
 import com.ucb.ucbtest.gitalias.GitaliasUI
 import com.ucb.ucbtest.home.HomeUI
+import com.ucb.ucbtest.home.PlanFormUI
 import com.ucb.ucbtest.login.LoginUI
 import com.ucb.ucbtest.navigation.AppNavigation
 import com.ucb.ucbtest.takephoto.TakePhotoUI
@@ -21,7 +22,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-           HomeUI()
+           //HomeUI()
+            //PlanFormUI()
+            AppNavigation()
         }
     }
 }

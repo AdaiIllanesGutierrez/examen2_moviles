@@ -12,6 +12,7 @@ import com.ucb.domain.Movie
 import com.ucb.ucbtest.counter.CounterUI
 import com.ucb.ucbtest.gitalias.GitaliasUI
 import com.ucb.ucbtest.home.HomeUI
+import com.ucb.ucbtest.home.PlanFormUI
 import com.ucb.ucbtest.login.LoginUI
 import com.ucb.ucbtest.movie.MoviesUI
 import com.ucb.ucbtest.moviedetail.MovieDetailUI
@@ -27,7 +28,7 @@ fun AppNavigation() {
 
     NavHost(
         navController = navController,
-        startDestination = Screen.LoginScreen.route,
+        startDestination = Screen.HomeScreen.route,
         enterTransition = { EnterTransition.None },
         exitTransition = { ExitTransition.None },
         popEnterTransition = { EnterTransition.None },
@@ -87,7 +88,11 @@ fun AppNavigation() {
             CounterUI()
         }
         composable(Screen.HomeScreen.route) {
-            HomeUI()
+            HomeUI(navController = navController)
+        }
+
+        composable(Screen.PlanFormScreen.route) {
+            PlanFormUI()
         }
 
     }

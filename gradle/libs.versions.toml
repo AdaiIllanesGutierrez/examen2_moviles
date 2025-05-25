@@ -30,6 +30,8 @@ googleGmsGoogleServices = "4.4.2"
 firebaseMessaging = "24.1.1"
 
 [libraries]
+maps-compose = "com.google.maps.android:maps-compose:2.11.4"
+play-services-maps = "com.google.android.gms:play-services-maps:18.2.0"
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose" }
 androidx-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "runtimeLivedata" }
